@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const pino = require('pino');
 const expPino = require('express-pino-logger');
+var cors = require('cors')
+
+app.use(cors())
+
 
 const logger = pino({
     level: 'info',
