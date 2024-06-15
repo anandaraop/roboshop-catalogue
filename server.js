@@ -6,7 +6,10 @@ const pino = require('pino');
 const expPino = require('express-pino-logger');
 var cors = require('cors')
 
-app.use(cors())
+var corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 
 const logger = pino({
